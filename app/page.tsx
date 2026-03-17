@@ -62,18 +62,18 @@ export default function HomePage() {
 
       {!loading && !error && projects.length > 0 && (
         <ul className="space-y-3">
-          {projects.map((project, index) => (
-            <li key={String(project.id)} className={index === 1 ? 'ml-12' : ''}>
+          {projects.map((project) => (
+            <li key={String(project.id)}>
               <Link
                 href={`/projects/${encodeURIComponent(String(project.id))}`}
                 className="card block transition hover:-translate-y-0.5 hover:border-cyan-200 hover:shadow-md"
               >
-                <div className="flex items-center justify-between gap-3">
-                  <div>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="min-w-0">
                     <h2 className="text-lg font-semibold">{project.name}</h2>
                     <p className="mt-0.5 text-sm text-slate-600">Owner: {project.owner}</p>
                   </div>
-                  <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-500">
+                  <span className="self-start rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-500 sm:self-center">
                     Updated {new Date(project.updatedAt).toLocaleString()}
                   </span>
                 </div>

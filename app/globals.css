@@ -33,3 +33,101 @@ body {
 .btn-primary {
   @apply rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60;
 }
+
+.markdown-toc {
+  @apply rounded-xl border border-slate-200 bg-slate-50/80 p-4;
+}
+
+.markdown-toc-title {
+  @apply text-xs font-semibold uppercase tracking-[0.18em] text-slate-500;
+}
+
+.markdown-toc-list {
+  @apply mt-3 space-y-1;
+}
+
+.markdown-toc-item[data-level='2'] {
+  @apply pl-4;
+}
+
+.markdown-toc-item[data-level='3'] {
+  @apply pl-8;
+}
+
+.markdown-toc-button {
+  @apply w-full rounded-md px-2 py-1.5 text-left text-sm text-slate-700 transition hover:bg-white hover:text-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-200;
+}
+
+.markdown-preview {
+  @apply text-slate-800;
+}
+
+.markdown-preview > * + * {
+  @apply mt-4;
+}
+
+.markdown-preview :is(h1, h2, h3) {
+  scroll-margin-top: 1rem;
+}
+
+.markdown-preview h1 {
+  @apply text-3xl font-semibold tracking-tight text-slate-950;
+}
+
+.markdown-preview h2 {
+  @apply text-2xl font-semibold tracking-tight text-slate-950;
+}
+
+.markdown-preview h3 {
+  @apply text-xl font-semibold text-slate-900;
+}
+
+.markdown-preview h4 {
+  @apply text-lg font-semibold text-slate-900;
+}
+
+.markdown-preview p,
+.markdown-preview li,
+.markdown-preview blockquote {
+  @apply leading-7;
+}
+
+.markdown-preview ul {
+  @apply list-disc pl-6;
+}
+
+.markdown-preview ol {
+  @apply list-decimal pl-6;
+}
+
+.markdown-preview li + li {
+  @apply mt-1;
+}
+
+.markdown-preview a {
+  @apply font-medium text-cyan-700 underline underline-offset-2;
+}
+
+.markdown-preview strong {
+  @apply font-semibold text-slate-950;
+}
+
+.markdown-preview code {
+  @apply rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900;
+}
+
+.markdown-preview pre {
+  @apply overflow-x-auto rounded-xl bg-slate-950 p-4 text-slate-100;
+}
+
+.markdown-preview pre code {
+  @apply bg-transparent p-0 text-inherit;
+}
+
+.markdown-preview blockquote {
+  @apply border-l-4 border-slate-300 pl-4 italic text-slate-600;
+}
+
+.markdown-preview hr {
+  @apply border-slate-200;
+}
